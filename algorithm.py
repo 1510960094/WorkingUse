@@ -6,3 +6,10 @@ class Singleton(object):
             orig = super(Singleton,cls)
             cls._instance = orig.__new__(cls,*args,**kwargs)
         return cls._instance
+class Singleton2(object):
+    instance = {}
+    def getinstance():
+        if cls not in instance:
+            instances[cls] = cls(*args,**kwargs)
+        return instance[cls]
+
